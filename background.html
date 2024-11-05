@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        background-color: yellow;
+        width:200px;
+        height:100px;
+        border:2px solid white;
+    }
+</style>
+
+<body>
+    <!--<div id="main">
+        <ul id="list">
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+        </ul>
+   </div>
+ <p id="removeMe">This paragraph will be removed.</p>
+ <img src="https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_640.jpg" id="image">
+ <p id="myParagraph">This paragraph will be highlighted.</p>-->
+
+<button id="btn">Submit</button>
+<div id="main">
+    <ul id="list">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+</div>
+   <script>
+//let c=document.getElementById("list");
+//c.removeChild(c.lastElementChild);
+//const element = document.getElementById('removeMe');
+//element.remove();
+//let x=document.getElementById("image");
+//x.setAttribute("src","https://media.istockphoto.com/id/1387771358/photo/marigold-flower-rangoli-design-for-diwali-festival-indian-festival-flower-decoration.jpg?s=1024x1024&w=is&k=20&c=JuZ-jtxNBxCOlK8OOJDbawy-kq1w5bQF7BvyTnE59eE=");    
+//const paragraph = document.getElementById('myParagraph');
+       // paragraph.classList.add('highlight');
+        // To remove the class, you can use:
+        // paragraph.classList.remove('highlight');
+
+//document.getElementById("btn").addEventListener("click",function(){
+//document.getElementById("myParagraph").textContent="Hi";
+//})
+
+//document.getElementById("btn").addEventListener("mouseover",function(){
+//document.getElementById("main").style.borderColor="red";
+//});
+//document.getElementById("btn").addEventListener("mouseout",function(){
+//document.getElementById("main").style.borderColor="black";
+//});
+
+document.querySelector("#btn").addEventListener("mouseover",function(){
+    document.querySelector("#main").style.borderColor="red";
+})
+</script></body>
+</html>

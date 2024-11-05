@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+        border:solid black;
+        width:50%;
+        height:350px;
+    }
+    .z{
+        margin-left:10px;
+    }
+    h2{
+        margin-left:10px;
+    }
+    button{
+        border:solid black;
+        background-color: green;
+        color: white;
+
+    }
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+    <form id="x">
+<label><h2>Name</h2></label>
+<input type="text" id="y" class="z">
+<label><h2>Email</h2></label>
+<input type="text" id="b" class="z">
+<label><h2>Mobile Number</h2></label>
+<input type="text" id="x" class="z">
+<button id="btn">Submit</button>
+    </form>
+    </div>
+    <script>
+        document.querySelector("#btn").onclick=function(){
+            let y=document.querySelectorAll(".z");
+            y.forEach(function(element) {
+        console.log(element.value);
+    });
+        }
+    </script>
+</body>
+</html>

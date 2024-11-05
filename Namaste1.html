@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Javascript</title>
+    </head>
+    <style>
+        .Redbutton{
+            background-color:red;
+            color:white;
+        }
+    </style>
+    <body>
+        <h1>Namaste Javascript</h1>
+        <button id="Click me">Click Me</button>
+        <h1 id="heading">Hi</h1>
+      <script>
+      const element=document.getElementById("heading");
+element.textContent="Hello";
+const x=document.getElementById("Click me");
+x.addEventListener("click",function(){
+    x.classList.add("Redbutton");
+});
+
+</script>
+     
+    </body>
+</html>
+

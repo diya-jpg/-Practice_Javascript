@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let prom=new Promise((resolve)=>{
+        //     setTimeout(()=>{
+        //         resolve("Promise successful");
+        //     },10000)
+        // });
+        // prom.then(element=>{
+        //     console.log(element);
+        // })
+
+        // let prom2=new Promise((_,reject)=>{
+        //     setTimeout(()=>{
+        //         reject(new Error("Promise unsuccessful"));
+        //     },1000)
+        // });
+        // prom2.catch(error=>{
+        //     console.log(error.message);
+        // })
+
+
+//         function Food(dish) {
+//         return new Promise(resolve => {
+//           setTimeout(() => {
+//             console.log(dish)
+//             resolve(dish);
+//           }, 3000);
+//         });
+//       }
+
+  
+// Food("Pizza").then(()=>{
+//     Food("Burger").then(()=>{
+//         Food("Patties").then(()=>{
+//             Food("Colddrink");
+//         })
+//     })
+// })
+   
+//  function Food(dish) {
+//         return new Promise((resolve, reject) => {
+//           setTimeout(() => {
+//             // console.log(dish)
+//             resolve(dish);
+//           }, 3000);
+//         });
+//     }
+
+//     async function output(){
+
+//         let pizza = await Food("Pizza");
+//         console.log(pizza)
+//         let burger = await Food("Burger");
+//         console.log(burger);
+//         let patties = await Food("Patties");
+//         console.log(patties)
+
+
+//     }
+
+
+//     output() ;
+
+
+const promiseToReject = new Promise((_, reject) => setTimeout(() => reject(new Error('Rejected value')), 1000));
+
+async function handleRejectedPromise() {
+  try {
+    const value = await promiseToReject;
+    console.log(value);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+handleRejectedPromise();
+
+
+    </script>
+</body>
+</html>

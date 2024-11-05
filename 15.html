@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <select id="myselect">
+        <option value="option1">Option1</option>
+        <option value="option2">Option2</option>
+        <option value="option3">Option3</option>
+    </select>
+    <p id="displayValue"></p>-->
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+
+    <script>
+        // document.getElementById("myselect").addEventListener("change",function(event){
+        //     document.getElementById("displayValue").innerText=`${event.target.value}`;
+        // })
+        document.getElementById('myList').addEventListener("click", function(event) {
+            if(event.target && event.target.nodeName === "li") {
+                console.log(event.target.textContent);
+            }
+        });
+ 
+    </script>
+</body>
+</html>

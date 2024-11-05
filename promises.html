@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const p1=new Promise((resolve,reject)=>{
+    setTimeout(()=>reject("P1 fail"),3000);
+})                                         //you can use fetch
+
+const p2=new Promise((resolve,reject)=>{
+    //setTimeout(()=>reject("P2 fail"),1000);
+    setTimeout(()=>reject("P2 fail"),5000);
+})                                         //you can use fetch
+
+
+const p3=new Promise((resolve,reject)=>{
+    //  setTimeout(()=>resolve("P3 success"),2000);
+    setTimeout(()=>reject("P3 fail"),2000);
+})                                         //you can use fetch
+
+Promise.any([p1,p2,p3]).then((item)=>{
+    console.log(item);
+})
+.catch((err)=>{
+console.log(err);
+//console.log(err.errors);
+console.log(err.errors[0]);
+})
+</script>
+</html>

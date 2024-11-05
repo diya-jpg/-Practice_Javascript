@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height:100px;
+            width:50%;
+        }
+        div{
+            width:15%;
+            height:25px;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p">Hello My name is Diya.</p>
+   <button id="btn">Hello</button>
+   <img id="image"src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg">
+   <div id="d"></div>
+   <input type="text" id="myid">
+   <input type="text" id="myid2">
+   <p id="p1"></p>
+</body>
+<script>
+    document.querySelector("#btn").addEventListener("click",function(){
+document.querySelector("#p").textContent="Hi";
+    })
+    document.querySelector("#image").addEventListener("dblclick",function(){
+this.style.display=(this.style.display==='none')?'block':'none';//none->no space//block->full space
+    })
+
+document.querySelector("#d").addEventListener("mouseover",function(){
+    document.querySelector("#d").style.backgroundColor="red";
+})
+document.querySelector("#d").addEventListener("mouseout",function(){
+    document.querySelector("#d").style.backgroundColor="green";
+})
+document.querySelector("#myid").addEventListener("keydown",function(event){
+    console.log("keypressed:",event.key);
+})
+document.querySelector("#myid2").addEventListener("keyup",function(){
+    document.querySelector("#p1").textContent=this.value;
+})
+
+
+
+</script>
+</html>
